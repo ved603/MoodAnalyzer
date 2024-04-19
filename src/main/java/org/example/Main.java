@@ -13,10 +13,9 @@ public class Main {
         if (str.contains("sad")) {
             return "Sad";
         }
-        else if (str.contains("any")) {
+        else if (str.contains("happy")) {
             return "Happy";
         }
-
         else{
                 return "";
             }
