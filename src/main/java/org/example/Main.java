@@ -5,9 +5,8 @@ public class Main {
     public String MoodAnalzer(String a) {
         if (a.equals("I am in Sad Mood")) {
             return "Sad";
-        } else {
-            return "Happy";
-        }
+        } 
+        return "";
     }
 //    public static void main(String[] args) {
 //
