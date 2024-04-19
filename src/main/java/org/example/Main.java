@@ -1,18 +1,24 @@
 package org.example;
 
 public class Main {
+    String str = "";
+    public Main(){
 
-    public String MoodAnalzer(String a) {
-        if (a.equals("I am in Sad Mood")) {
+    }
+    public Main(String a) {
+        this.str = a.toLowerCase();
+    }
+
+    public String getString() {
+        if (str.contains("sad")) {
             return "Sad";
-        } else {
+        }
+        else if (str.contains("any")) {
             return "Happy";
         }
+
+        else{
+                return "";
+            }
+        }
     }
-//    public static void main(String[] args) {
-//
-//        Main m =new Main();
-//        m.MoodAnalzer("I am in Sad Mood");
-//    }
-//}
-}
