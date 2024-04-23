@@ -28,14 +28,15 @@ public class Main extends Exception {
         }
         if (str.contains("sad"))
         {
-            return "Sad";
+            mood = Mood.Sad;
         }
         else if (str.contains("happy"))
         {
-            return "Happy";
+            mood = Mood.Happy;
         }
         else{
-            return "";
+            mood = Mood.EMPTY;
         }
+        return mood.toString();
     }
 }
