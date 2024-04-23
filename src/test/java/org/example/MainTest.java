@@ -12,17 +12,12 @@ public class MainTest {
         Main m = new Main("I am in Sad Mood");
         Main m1 = new Main("I am in Happy Mood ");
         Main m2 = new Main();
-//        try {
             String res=m.getString();
             String res1 = m1.getString();
-//            String res2 = m2.getString();
+            String res2 = m2.getString();
             assertEquals("Sad", res);
             assertEquals("Happy", res1);
-//            assertEquals("Happy",res2);
-//        }
+            assertEquals("Happy",res2);
 
-//        catch(Exception e){
-//            System.out.println(e.getMessage());
-//        }
     }
 }
