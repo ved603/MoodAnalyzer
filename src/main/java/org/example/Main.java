@@ -17,15 +17,25 @@ public class Main extends Exception {
     public String getString() {
         Mood mood;
         try {
-            if (str == null || str.isEmpty())
+            if (str == null)
             {
+                mood = Mood.NULL;
                 throw new AnalyzerException("Happy");
             }
+            else if(str.isEmpty())
+            {
+                mood = Mood.EMPTY;
+                throw new AnalyzerException("Invalid Mood");
+            }
+
         }
+
         catch (Exception e)
         {
             return e.getMessage();
         }
+
+
         if (str.contains("sad"))
         {
             mood = Mood.Sad;
