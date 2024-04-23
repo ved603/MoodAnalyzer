@@ -1,23 +1,38 @@
 package org.example;
 
-public class Main {
-    String str = "";
-    public Main(){
 
+public class Main extends Exception {
+    String str;
+
+    public Main() {
     }
+
     public Main(String a) {
+
         this.str = a.toLowerCase();
     }
 
     public String getString() {
-        if (str.contains("sad")) {
+        try {
+            if (str == null || str.isEmpty())
+            {
+                throw new AnalyzerException("Happy");
+            }
+        }
+        catch (Exception e)
+        {
+            return e.getMessage();
+        }
+        if (str.contains("sad"))
+        {
             return "Sad";
         }
-        else if (str.contains("happy")) {
+        else if (str.contains("happy"))
+        {
             return "Happy";
         }
         else{
-                return "";
-            }
+            return "";
         }
     }
+}

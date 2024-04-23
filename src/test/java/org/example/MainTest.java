@@ -8,10 +8,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MainTest {
     @Test
-    public void testMood(){
+    public void testMood() throws AnalyzerException{
         Main m = new Main("I am in Sad Mood");
         Main m1 = new Main("I am in Happy Mood ");
-        Assertions.assertEquals("Sad",m.getString());
-        Assertions.assertEquals("Happy",m1.getString());
+        Main m2 = new Main();
+//        try {
+            String res=m.getString();
+            String res1 = m1.getString();
+//            String res2 = m2.getString();
+            assertEquals("Sad", res);
+            assertEquals("Happy", res1);
+//            assertEquals("Happy",res2);
+//        }
+
+//        catch(Exception e){
+//            System.out.println(e.getMessage());
+//        }
     }
 }
