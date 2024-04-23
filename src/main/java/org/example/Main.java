@@ -1,6 +1,8 @@
 package org.example;
 
-
+enum Mood{
+    Happy,Sad,NULL,EMPTY;
+}
 public class Main extends Exception {
     String str;
 
@@ -13,6 +15,7 @@ public class Main extends Exception {
     }
 
     public String getString() {
+        Mood mood;
         try {
             if (str == null || str.isEmpty())
             {
